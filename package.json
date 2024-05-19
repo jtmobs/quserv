@@ -1,0 +1,59 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "an intuitive eco shop server",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16.x",
+    "npm": ">=8.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "build": "babel . -d dist && --ignore node_modules --verbose",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/devhasibulislam/ciseco-ecommerce",
+  "author": "Hasibul Islam",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "babel7-istanbul-middleware": "^0.9.2",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.41.0",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "istanbul-middleware-jm": "^1.2.4",
+    "istanbul-middleware-ry": "^0.0.8",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.0",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nyc": "^15.1.0",
+    "ry-istanbul-web": "^0.0.7",
+    "stripe": "^14.13.0",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "istanbul-middleware-jm": "^1.2.4",
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/register": "^7.23.7",
+    "nodemon": "^3.0.1"
+  },
+  "nyc": {
+    "include": [
+      "html",
+      "text-summary"
+    ],
+    "extension": [
+      ".js",
+      ".vue",
+      ".jsx"
+    ]
+  }
+}
